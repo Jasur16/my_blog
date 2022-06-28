@@ -25,9 +25,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'blogs',
     'works',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -68,7 +68,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'my_blog',
-        'USERNAME': 'root',
+        'USER': 'root',
         'PASSWORD': 'Qwerty123$',
         'HOST': 'localhost',
         'PORT': '3306',
@@ -115,7 +115,7 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = BASE_DIR / 'static'
 
-STATICFILES_DIRS = BASE_DIR / 'assets'
+STATICFILES_DIRS = BASE_DIR / 'assets',
 
 MEDIA_URL = 'media/'
 
