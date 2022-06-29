@@ -1,0 +1,112 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<header>
+    <section class="section_one">
+        <div class="text_sec">
+            <h1>
+                Hi, I am John, <br> Creative Technologist
+            </h1>
+            <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+            </p>
+        </div>
+        <div class="img_img">
+        </div>
+        </div>
+    </section>
+    <div class="bttnn">
+        <button>
+            <a href="#">Download Resume</a>
+        </button>
+</header>
+
+<!--section end -->
+
+<section class="second">
+    <div class="second_top">
+        <h1>Recent posts</h1>
+        <a href="#">View all</a>
+    </div>
+    <div class="second_boxs">
+        <div>
+            <h1>Making a design system from scratch</h1>
+            <h2>12 Feb 2020 &nbsp; &#10072; &nbsp; Design, Pattern</h2>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        </div>
+        <div>
+            <h1>Creating pixel perfect icons in Figma</h1>
+            <h2>12 Feb 2020 &nbsp; &#10072; &nbsp; Figma, Icon Design</h2>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        </div>
+    </div>
+</section>
+<!--end section 2-->
+<section class="thirddh">
+    <div class="thirth">
+        <h1>Featured works</h1>
+        <div class="news">
+            <div class="triangle">
+                <img src="{% static 'main/img/Rectangle 30.svg' %}" alt="">
+                <div>
+                    <a href="./z_dashbord_ichi_workss.html">Designing Dashboards</a>
+                    <div class="date">
+                        <div class="boxx">
+                            <p>2020</p>
+                        </div>
+                        <h2>Dashboard</h2>
+                    </div>
+                    <p>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit <br> officia
+                        consequat duis enim velit mollit. Exercitation veniam consequat sunt <br> nostrud amet.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="news">
+            <div class="triangle">
+                <img src="{% static 'main/img/Rectangle 34.svg' %}" alt="">
+                <div>
+                    <a href="./z_dashbord_ichi_workss.html">Vibrant Portraits of 2020</a>
+                    <div class="date">
+                        <div class="boxx">
+                            <p>2018</p>
+                        </div>
+                        <h2>Illustration</h2>
+                    </div>
+                    <p>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit <br> officia
+                        consequat duis enim velit mollit. Exercitation veniam consequat sunt <br> nostrud amet.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="news">
+            <div class="triangle">
+                <img src="{% static 'main/img/Rectangle 34.svg' %}" alt="">
+                <div>
+                    <a href="#">36 Days of Malayalam types</a>
+                    <div class="date">
+                        <div class="boxx">
+                            <p>2018</p>
+                        </div>
+                        <h2>Typography</h2>
+                    </div>
+                    <p>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit <br> officia
+                        consequat duis enim velit mollit. Exercitation veniam consequat sunt <br> nostrud amet.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</section>
+{% endblock %}
