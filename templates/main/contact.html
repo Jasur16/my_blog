@@ -1,5 +1,92 @@
 {% extends 'layouts/base.html' %}
+{% load static %}
 
 {% block content %}
+<header>
+    <section class="h_contact" id="h_contact">
+        <div class="content">
+            <h1>contact informations</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Quos, iusto in reprehenderit vitae animi
+                cumque quisquam nihil temporibus eligendi molestias aliquid dolor. <br> Mollitia, alias soluta.
+            </p>
+        </div>
+        <div class="h_container">
+            <div class="h_contact_info">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h1>Phone number</h1>
+                        <a href="tel:+998330087078">+998 33 0087 087</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h1>Email Address</h1>
+                        <a href="mailto:jackodilov@gmail.com">jackodilov@gmail.com</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h1>Fax Address</h1>
+                        <p>+9999 9087 123</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h1>Location</h1>
+                        <p>123 Business Avenue, NYC</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact_form">
+                <h2>Send Massage</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis provident delt epturi placeat
+                    deleniti natus!
+                </p>
+                <form method="post" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    <div class="inputbox">
+                        <input type="text" name="name" required="required">
+                        <span>Your Name</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="phone" required="required">
+                        <span>Phone</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="subject" required="required">
+                        <span>Subject</span>
+                    </div>
+                    <div class="inputbox">
+                        <textarea required rows="5" name="message"></textarea>
+                        <span>Type your message...</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit" value="Send Message">
+                    </div>
+                    <!-- <button type="submit">Send message</button> -->
+                </form>
+            </div>
+        </div>
+    </section> <!-- end section 2-->
 
-{% endbloc %}
+    <section class="trusted">
+        <h1>TRUSTED BY</h1>
+        <div class="trusted_img">
+            <img src="{% static 'main/img/11.png' %}" alt="">
+            <img src="{% static 'main/img/22.png' %}" alt="">
+            <img src="{% static 'main/img/33.png' %}" alt="">
+            <img src="{% static 'main/img/44.png' %}" alt="">
+        </div>
+    </section>
+    <!--trusted end-->
+    {% endblock %}

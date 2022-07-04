@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="h_in_works">
+    <div class="h_works">
+        <img src="{{ object.image.url }}" alt="{{ object.title }}">
+        <h1>
+            {{ object.title }}
+        </h1>
+        <div>
+            <div class="boks">
+                <span>{{ objectc.created_at|date:"Y" }}</span>
+            </div>
+            <h3>{{ object.category }}</h3>
+        </div>
+        <p>
+            {{ object.body|safe }}
+        </p>
+    </div>
+    
+
+
+</section>
+{% endblock %}

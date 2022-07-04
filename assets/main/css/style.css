@@ -231,7 +231,7 @@ button {
 	font-weight: 900;
 }
 
-.triangle p:nth-child(3) {
+.triangle {
 	margin-left: 18px;
 	font-weight: 400;
 	line-height: 23.5px;
@@ -517,13 +517,15 @@ footer p {
 	margin: 60px 0 55px 0;
 }
 
-.p_second_boxs h1 {
+.p_second_boxs div h1 a {
 	margin-top: 32px;
 	font-weight: 500;
 	font-size: 1.875rem;
 	line-height: 44px;
 	margin-bottom: 16px;
 }
+
+
 
 .p_second_boxs h2 {
 	font-weight: 400;
@@ -983,4 +985,10 @@ footer p {
 		border: 1px solid var(--primary-color);
 	}
 
+}
+
+.work_image {
+	width: 246px;
+	height: 200px;
+	border-radius: 10px;
 }

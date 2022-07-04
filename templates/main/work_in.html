@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<section class="h_in_works">
+    <div class="h_works">
+        <h1>
+            {{ object.title }}
+        </h1>
+        <div>
+            <div class="boks">
+                <span>{{ objectc.created_at|date:"Y" }}</span>
+            </div>
+            {% for i in object.category.values %}
+                {% if forloop.first %}
+                    <h3>{{ i.name }},</h3>
+                {% else %}
+                    <h3>{{ i.name }}</h2>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <p>
+            {{ object.body|safe }}
+        </p>
+    </div>
+    
+
+
+</section>
+{% endblock %}

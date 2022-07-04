@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="p_second">
+    <div class="p_second_top">
+        <h1>Blog</h1>
+    </div>
+    <div class="p_second_boxs">
+        {% for blog in object_list %}
+        <div>
+            <h1><a style="color: #000; text-decoration: none;" href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></h1>
+            <h2>{{ blog.created_at|date:"d F Y" }} &nbsp; &#10072; &nbsp; {{ blog.category }}</h2>
+            <p>{{ blog.body|truncatewords:30|safe }}</p>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+</section>
+<!--end section 2-->
+{% endblock %}

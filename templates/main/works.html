@@ -1,0 +1,95 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="slick">
+    <div class="box one-time">
+        <div class="item">
+            <img src="{% static 'main/img/sites/braunn.png' %}" alt="">
+            <h2>Braun Haircut Machine Site</h2>
+        </div>
+        <div class="item">
+            <img src="{% static 'main/img/sites/reebok.svg' %}" alt="">
+            <h2>Reebok Outfit and Clothes Shop</h2>
+        </div>
+        <div class="item">
+            <img src="{% static 'main/img/sites/seo.png' %}" alt="">
+            <h2>SEO Flow Marketing Site</h2>
+        </div>
+        <div class="item">
+            <img src="{% static 'main/img/sites/woman_new_collection.svg' %}" alt="">
+            <h2>Women and Kids Store</h2>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="thworks">
+    <div class="thirth">
+        <h1>Other Works</h1>
+        {% for work in object_list %}
+        <div class="news">
+            <div class="triangle">
+                <img src="{{ work.work_image.url }}" class="work_image" alt="">
+                <div>
+                    <a href="{% url 'detail' work.pk %}">{{ work.title }}</a>
+                    <div class="date">
+                        <div class="boxx">
+                            <p>{{ work.created_at|date:"Y" }}</p>
+                        </div>
+                        <div class="ms-4 d-flex">
+                            {% for i in work.category.values %}
+                                {% if forloop.first %}
+                                    <h2 class="m-0">{{ i.name }},</h2>
+                                {% else %}
+                                    <h2 class=" me-3">{{ i.name }}</h2>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                        {{ work.body|truncatewords:'30'|safe }}
+                </div>
+            </div>
+        </div>
+        <hr>
+        {% endfor %}
+
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    $('.one-time').slick({
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2580,
+        infinitive: true,
+        slidesToShow: 1,
+        slideToScroll: 1,
+        fade: true,
+        adaptiveHeight: true,
+        cssEase: 'linear',
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false
+                }
+            }
+        ]
+    });
+</script>
+{% endblock %}

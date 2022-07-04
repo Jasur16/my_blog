@@ -9,12 +9,12 @@ class WorksCategoryModel(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'work'
-        verbose_name_plural = 'works'
+        verbose_name = 'work category'
+        verbose_name_plural = 'works categories'
 
 class WorksModel(models.Model):
     title = models.CharField(max_length=255)
-    body = RichTextUploadingField
+    body = RichTextUploadingField()
     created_at = models.DateTimeField(auto_now_add=True)
     work_image = models.ImageField(upload_to='works')
     category = models.ManyToManyField(WorksCategoryModel)
